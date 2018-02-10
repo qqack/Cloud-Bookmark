@@ -1,0 +1,114 @@
+.custom-image img {
+  display: block;
+}
+.custom-card {
+  padding: 10px 16px;
+}
+.custom-card p {
+  color: #999;
+}
+.menu{
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  border-bottom: none !important;
+  background:rgba(50,50,50,1);
+}
+.logo{
+  margin-left: 20px;
+  width:123px;
+  height: 50px;
+  /*background-image: url(../../assets/logo/logo.svg);*/
+}
+.menuBar{
+  height: 70px;
+  background:rgba(50,50,50,1);
+}
+.menuBar:hover{
+  background:rgba(50,50,50,1);
+}
+.menu:hover {
+  background:rgba(50,50,50,1) !important;
+}
+
+.title {
+  width: 147px;
+  height: 33px;
+  font-size: 24px;
+  font-family: PingFangSC-Semibold;
+  line-height: 33px;
+  /*margin-left: 165px;*/
+  color: white;
+  /*background:rgba(50,50,50,1);*/
+  /*background-image: url(../../assets/logo/Title.svg);*/
+}
+.title h3 {
+  color: rgba(255, 255, 255, 1);
+}
+.language_btn {
+  width:30px;
+  height:30px;
+  opacity:60;
+  border-color: #CCCCCC !important;
+  background-color: rgba(50,50,50,1);
+  color: #CCCCCC;
+}
+.language_btn span {
+  width:17px;
+  height:20px;
+  font-size:14px;
+  font-family:PingFangSC-Regular;
+  color:rgba(255,255,255,1);
+  line-height:20px;
+}
+.avatar {
+  width:30px;
+  height:30px;
+  margin-top: -37px;
+  margin-left: 50px;
+  /*background-image: url(../../assets/img/avatar.svg);*/
+}
+.tags_div {
+  margin-top: -28px;
+  float: right;
+  margin-right: 40px;
+}
+
+.header_nav {
+  margin-top: -28px;
+  margin-left: 40%;
+  width:183px;
+  height:20px;
+  font-size:14px;
+  font-family:PingFangSC-Regular;
+  color:rgba(255,255,255,1);
+  line-height:20px;
+
+}
+
+.header_nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.link {
+  width:83px;
+  height:20px;
+  font-size:14px;
+  color: white;
+  font-family:PingFangSC-Regular;
+  line-height:20px;
+}
+.link_component {
+  width:83px;
+  height:20px;
+  font-size:14px;
+  font-family:PingFangSC-Regular;
+  line-height:20px;
+}
+.menu:hover, .menu:active{
+  background-color: rgba(50,50,50,1) !important;
+  border-color: rgba(50,50,50,1) !important;
+  border-bottom: none;
+  border-bottom-width: 0;
+}

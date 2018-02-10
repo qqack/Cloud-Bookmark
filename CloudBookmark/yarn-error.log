@@ -1,0 +1,59 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add package.json
+
+PATH: 
+  /usr/local/bin:/home/qiuyan/anaconda2/bin:/home/qiuyan/bin:/home/qiuyan/.local/bin:/usr/local/bin:/home/qiuyan/anaconda2/bin:/dengyang/jdk1.8.0_56/bin:/dengyang/jdk1.8.0_56/jre/bin:/home/qiuyan/bin:/home/qiuyan/.local/bin:/dengyang/jdk1.8.0_56/bin:/dengyang/jdk1.8.0_56/jre/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+
+Yarn version: 
+  1.2.1
+
+Node version: 
+  8.9.1
+
+Platform: 
+  linux x64
+
+npm manifest: 
+  {
+    "private": true,
+    "scripts": {
+      "start": "roadhog server",
+      "build": "roadhog build",
+      "lint": "eslint --ext .js src test",
+      "precommit": "npm run lint"
+    },
+    "dependencies": {
+      "antd": "^3.0.0",
+      "babel-plugin-import": "^1.6.2",
+      "babel-runtime": "^6.9.2",
+      "dva": "^2.1.0",
+      "dva-loading": "^1.0.4",
+      "history": "^4.7.2",
+      "package.json": "^2.0.1",
+      "react": "^16.2.0",
+      "react-dom": "^16.2.0"
+    },
+    "devDependencies": {
+      "babel-eslint": "^8.0.3",
+      "babel-plugin-dva-hmr": "^0.4.0",
+      "babel-plugin-transform-runtime": "^6.9.0",
+      "eslint": "^4.12.1",
+      "eslint-config-airbnb": "^16.1.0",
+      "eslint-plugin-import": "^2.2.0",
+      "eslint-plugin-jsx-a11y": "^6.0.2",
+      "eslint-plugin-react": "^7.5.1",
+      "expect": "^21.2.1",
+      "husky": "^0.14.3",
+      "redbox-react": "^1.4.3",
+      "roadhog": "^1.2.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile '/home/qiuyan/.cache/yarn/v1/npm-has-flag-2.0.0-e8207af1cc7b30d446cc70b734b5e8be18f88d51/index.js' -> '/home/qiuyan/project/myGIthub/Cloud-Bookmark/CloudBookmark/node_modules/autoprefixer/node_modules/has-flag/index.js'

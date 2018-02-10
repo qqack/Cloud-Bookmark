@@ -1,8 +1,5 @@
 import fetch from 'dva/fetch';
-
-function parseJSON(response) {
-  return response.json();
-}
+import { message } from 'antd';
 
 function checkStatus(response) {
   if (response.status >= 200 && response.status < 300) {
@@ -14,6 +11,9 @@ function checkStatus(response) {
   throw error;
 }
 
+function isContains(str, substr) {
+  return str.indexOf(substr) >= 0;
+}
 /**
  * Requests a URL, returning a promise.
  *
@@ -21,10 +21,34 @@ function checkStatus(response) {
  * @param  {object} [options] The options we want to pass to "fetch"
  * @return {object}           An object containing either "data" or "err"
  */
-export default function request(url, options) {
-  return fetch(url, options)
-    .then(checkStatus)
-    .then(parseJSON)
-    .then(data => ({ data }))
-    .catch(err => ({ err }));
+
+export default async function request(url, options) {
+  const response = await fetch(url, options);
+  const deleteOperator = isContains(url, 'delete');
+  checkStatus(response);
+  const data = await response.json();
+  let ret = {};
+  if (!data) {
+    return [];
+  } else {
+    if (data.success === false) {
+      let error = null;
+      if (data.error) {
+        error = new Error(data.error);
+      } else if (data.msg) {
+        error = data.msg;
+      }
+      throw error;
+    } else {
+      ret = {
+        data,
+      };
+      if (deleteOperator) {
+        if (data.msg) {
+          message.success(data.msg);
+        }
+      }
+    }
+    return ret;
+  }
 }
